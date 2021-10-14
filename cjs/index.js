@@ -5,18 +5,15 @@ let runtimes = {
   node: [
     'nodejs14.x',
     'nodejs12.x',
-    'nodejs10.x',
   ],
   python: [
     'python3.9',
     'python3.8',
     'python3.7',
     'python3.6',
-    'python2.7',
   ],
   ruby: [
     'ruby2.7',
-    'ruby2.5',
   ],
   java: [
     'java11',
@@ -28,7 +25,6 @@ let runtimes = {
   ],
   dotnet: [
     'dotnetcore3.1',
-    'dotnetcore2.1',
   ],
   custom: [
     'provided.al2',
@@ -79,9 +75,35 @@ runtimes.rb =           runtimes.ruby
 runtimes.golang =       runtimes.go
 runtimes['.net'] =      runtimes.dotnet
 
+let retiredRuntimes = {
+  node: [
+    'nodejs10.x',
+    'nodejs8.10',
+    'nodejs6.10',
+    'nodejs4.3-edge',
+    'nodejs4.3',
+    'nodejs', // 0.10
+  ],
+  python: [
+    'python2.7',
+  ],
+  ruby: [
+    'ruby2.5',
+  ],
+  java: [],
+  go: [],
+  dotnet: [
+    'dotnetcore2.1',
+    'dotnetcore2.0',
+    'dotnetcore1.0',
+  ],
+  custom: [],
+}
+
 module.exports = {
   runtimes,
   runtimeList,
   runtimesByArchitecture,
   architecturesByRuntime,
+  retiredRuntimes,
 }
