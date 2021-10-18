@@ -68,12 +68,12 @@ Object.values(runtimes).forEach(r => {
 })
 
 let aliases = {
-  nodejs:     runtimes.node,
-  'node.js':  runtimes.node,
-  py:         runtimes.python,
-  rb:         runtimes.ruby,
-  golang:     runtimes.go,
-  '.net':     runtimes.dotnet,
+  nodejs:     'node',
+  'node.js':  'node',
+  py:         'python',
+  rb:         'ruby',
+  golang:     'go',
+  '.net':     'dotnet',
 }
 
 let retiredRuntimes = {

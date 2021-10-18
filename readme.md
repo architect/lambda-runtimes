@@ -42,7 +42,7 @@ let {
   - Example: `runtimesByArchitecture.arm64[0]` → `nodejs14.x`)
 - **`architecturesByRuntime`** (object) - list of Lambda CPU architectures supported by each runtime
   - Example: `architecturesByRuntime['nodejs14.x']` → `[ 'arm64', 'x86_64' ]`)
-- **`aliases`** (object) - shorthand or alternate names for runtime aliases (e.g. `py` for `runtimes.python`)
+- **`aliases`** (object) - shorthand or alternate names for runtime aliases (e.g. `py` for `python`)
 - **`retiredRuntimes`** (object) - retired / EOL Lambda runtime strings, organized by runtime name
   - Example: `retiredRuntimes.node[0]` → `nodejs10.x`
 
@@ -65,7 +65,7 @@ Example:
     ...
   },
   aliases: {
-    nodejs: [ 'nodejs14.x', 'nodejs12.x' ],
+    nodejs: 'node',
     ...
   },
   retiredRuntimes: {
