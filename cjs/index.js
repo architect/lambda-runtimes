@@ -67,13 +67,14 @@ Object.values(runtimes).forEach(r => {
   })
 })
 
-// Add aliases after the other stuff populated to prevent dupes
-runtimes.nodejs =       runtimes.node
-runtimes['node.js'] =   runtimes.node
-runtimes.py =           runtimes.python
-runtimes.rb =           runtimes.ruby
-runtimes.golang =       runtimes.go
-runtimes['.net'] =      runtimes.dotnet
+let aliases = {
+  nodejs:     runtimes.node,
+  'node.js':  runtimes.node,
+  py:         runtimes.python,
+  rb:         runtimes.ruby,
+  golang:     runtimes.go,
+  '.net':     runtimes.dotnet,
+}
 
 let retiredRuntimes = {
   node: [
@@ -105,5 +106,6 @@ module.exports = {
   runtimeList,
   runtimesByArchitecture,
   architecturesByRuntime,
+  aliases,
   retiredRuntimes,
 }

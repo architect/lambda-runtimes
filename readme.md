@@ -16,6 +16,7 @@ import {
   runtimeList,
   runtimesByArchitecture,
   architecturesByRuntime,
+  aliases,
   retiredRuntimes,
 } from 'lambda-runtimes'
 ```
@@ -27,6 +28,7 @@ let {
   runtimeList,
   runtimesByArchitecture,
   architecturesByRuntime,
+  aliases,
   retiredRuntimes,
 } = require('lambda-runtimes')
 ```
@@ -40,6 +42,7 @@ let {
   - Example: `runtimesByArchitecture.arm64[0]` → `nodejs14.x`)
 - **`architecturesByRuntime`** (object) - list of Lambda CPU architectures supported by each runtime
   - Example: `architecturesByRuntime['nodejs14.x']` → `[ 'arm64', 'x86_64' ]`)
+- **`aliases`** (object) - shorthand or alternate names for runtime aliases (e.g. `py` for `runtimes.python`)
 - **`retiredRuntimes`** (object) - retired / EOL Lambda runtime strings, organized by runtime name
   - Example: `retiredRuntimes.node[0]` → `nodejs10.x`
 
@@ -59,6 +62,10 @@ Example:
   architecturesByRuntime: {
     'nodejs14.x': [ 'arm64', 'x86_64' ],
     'nodejs12.x': [ 'arm64', 'x86_64' ],
+    ...
+  },
+  aliases: {
+    nodejs: [ 'nodejs14.x', 'nodejs12.x' ],
     ...
   },
   retiredRuntimes: {
