@@ -1,7 +1,7 @@
 {
   "name": "lambda-runtimes",
   "description": "Canonical list of AWS Lambda runtime identifiers and corresponding CPU architectures",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "module": "./esm/index.js",
   "main": "./cjs/index.js",
