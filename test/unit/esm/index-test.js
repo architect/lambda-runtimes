@@ -7,9 +7,10 @@ test('Set up env', t => {
 })
 
 test('Exports', t => {
-  t.plan(7)
+  t.plan(8)
   let {
     runtimes,
+    runtimeVersions,
     runtimeList,
     runtimesByArchitecture,
     architecturesByRuntime,
@@ -17,12 +18,13 @@ test('Exports', t => {
     retiredRuntimes,
   } = lambdaRuntimes
   t.ok(runtimes, 'Got runtimes')
+  t.ok(runtimeVersions, 'Got runtimeVersions')
   t.ok(runtimeList, 'Got runtimeList')
   t.ok(runtimesByArchitecture, 'Got runtimesByArchitecture')
   t.ok(architecturesByRuntime, 'Got architecturesByRuntime')
   t.ok(aliases, 'Got aliases')
   t.ok(retiredRuntimes, 'Got retiredRuntimes')
-  t.equal(Object.keys(lambdaRuntimes).length, 6, 'Got all properties')
+  t.equal(Object.keys(lambdaRuntimes).length, 7, 'Got all properties')
   console.dir(lambdaRuntimes, { depth: null })
 })
 
@@ -33,6 +35,17 @@ test('runtimes semantics', t => {
     if (!Array.isArray(v)) t.fail(`Expected an array: ${v}`)
   })
   t.pass('All runtimes values are arrays')
+})
+
+test('runtimeVersions semantics', t => {
+  t.plan(2)
+  let { runtimeList, runtimeVersions } = lambdaRuntimes
+  let list = runtimeList.filter(r => !r.startsWith('provided'))
+  list.forEach(runtime => {
+    if (!runtimeVersions[runtime]) t.fail(`${runtime} not found in runtimeVersions`)
+  })
+  t.pass('Found all runtimeVersions')
+  t.equal(list.length, Object.keys(runtimeVersions).length, 'Correct number of runtimeVersions found')
 })
 
 test('runtimeList semantics', t => {
