@@ -32,6 +32,81 @@ let runtimes = {
   ],
 }
 
+let runtimeVersions = {
+  'nodejs14.x': {
+    major:    '14',
+    minor:    null,
+    patch:    null,
+    wildcard: '14.*.*'
+  },
+  'nodejs12.x': {
+    major:    '12',
+    minor:    null,
+    patch:    null,
+    wildcard: '12.*.*',
+  },
+  'python3.9': {
+    major:    '3',
+    minor:    '9',
+    patch:    null,
+    wildcard: '3.9.*',
+  },
+  'python3.8': {
+    major:    '3',
+    minor:    '8',
+    patch:    null,
+    wildcard: '3.8.*',
+  },
+  'python3.7': {
+    major:    '3',
+    minor:    '7',
+    patch:    null,
+    wildcard: '3.7.*',
+  },
+  'python3.6': {
+    major:    '3',
+    minor:    '6',
+    patch:    null,
+    wildcard: '3.6.*',
+  },
+  'ruby2.7': {
+    major:    '2',
+    minor:    '7',
+    patch:    null,
+    wildcard: '2.7.*',
+  },
+  'java11': {
+    major:    '11',
+    minor:    null,
+    patch:    null,
+    wildcard: '11.*.*',
+  },
+  'java8.al2': {
+    major:    '8',
+    minor:    null,
+    patch:    null,
+    wildcard: '8.*.*',
+  },
+  'java8': {
+    major:    '8',
+    minor:    null,
+    patch:    null,
+    wildcard: '8.*.*',
+  },
+  'go1.x': {
+    major:    '1',
+    minor:    null,
+    patch:    null,
+    wildcard: '1.*.*',
+  },
+  'dotnetcore3.1': {
+    major:    '3',
+    minor:    '1',
+    patch:    null,
+    wildcard: '3.1.*',
+  },
+}
+
 let runtimeList = Object.values(runtimes).reduce((a, b) => a.concat(b), [])
 
 let runtimesByArchitecture = {
@@ -110,6 +185,7 @@ let retiredRuntimes = {
 
 module.exports = {
   runtimes,
+  runtimeVersions,
   runtimeList,
   runtimesByArchitecture,
   architecturesByRuntime,
