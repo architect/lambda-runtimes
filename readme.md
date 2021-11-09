@@ -13,6 +13,7 @@
 // esm
 import {
   runtimes,
+  runtimeVersions,
   runtimeList,
   runtimesByArchitecture,
   architecturesByRuntime,
@@ -25,6 +26,7 @@ import {
 // cjs
 let {
   runtimes,
+  runtimeVersions,
   runtimeList,
   runtimesByArchitecture,
   architecturesByRuntime,
@@ -33,10 +35,12 @@ let {
 } = require('lambda-runtimes')
 ```
 
-`lambda-runtimes` exports five items:
+`lambda-runtimes` exports seven items:
 - **`runtimes`** (object) - Lambda runtime strings, organized by runtime name
   - Example: `runtimes.node[0]` → `nodejs14.x`
   - Where appropriate, each runtime may include (lowcase normalized) aliases, e.g. `runtimes.node` === `runtimes.nodejs` === `runtimes.['node.js']`
+- **`runtimeVersions`** (object) - Semver representations of each Lambda runtime
+  - Example: `runtimeVersions['nodejs14.x']` returns an object with `major: '14'`, `minor: null`, `patch: null`, and `wildcard: '14.*.*'` properties
 - **`runtimeList`** (array) - list of all Lambda runtime strings (order not necessarily guaranteed)
 - **`runtimesByArchitecture`** (object) - list of Lambda runtimes supported by each CPU architecture
   - Example: `runtimesByArchitecture.arm64[0]` → `nodejs14.x`)
@@ -52,6 +56,10 @@ Example:
 {
   runtimes: {
     node: [ 'nodejs14.x', 'nodejs12.x' ],
+    ...
+  },
+  runtimeVersions: {
+    'nodejs14.x': { major: '14', minor: null, patch: null, wildcard: '14.*.*' },
     ...
   },
   runtimeList: [ 'nodejs14.x', 'nodejs12.x', ... ],
