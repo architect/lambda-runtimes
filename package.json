@@ -26,9 +26,9 @@
   "devDependencies": {
     "@architect/eslint-config": "^2.0.1",
     "cross-env": "~7.0.3",
-    "eslint": "^8.1.0",
+    "eslint": "^8.2.0",
     "tap-spec": "~5.0.0",
-    "tape": "~5.3.1"
+    "tape": "~5.3.2"
   },
   "eslintConfig": {
     "extends": "@architect/eslint-config"

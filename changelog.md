@@ -2,11 +2,19 @@
 
 ---
 
+## [1.1.1] 2021-11-17
+
+### Added
+
+- Add `runtime` property with runtime name to runtime version metadata (`runtimeVersions`)
+
+---
+
 ## [1.1.0] 2021-11-04
 
 ### Added
 
-- Added runtime version metadata to help smooth out the funky ways AWS represents Lambda runtime versions (variable minor: `nodejs14.x`, known-minor: `python3.9`, major-only: `java11`)
+- Added runtime version metadata (`runtimeVersions`) to help smooth out the funky ways AWS represents Lambda runtime versions (variable minor: `nodejs14.x`, known-minor: `python3.9`, major-only: `java11`)
 
 ---
 
