@@ -3,8 +3,8 @@
 // Runtimes still being tested out can be added, just not at runtimes[runtime][0]
 let runtimes = {
   node: [
-    'nodejs16.x',
     'nodejs14.x',
+    'nodejs16.x',
     'nodejs12.x',
   ],
   python: [
