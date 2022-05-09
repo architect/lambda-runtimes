@@ -6,7 +6,6 @@
 
 `npm i lambda-runtimes`
 
-
 ### Usage
 
 ```js
