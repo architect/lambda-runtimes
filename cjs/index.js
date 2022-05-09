@@ -4,6 +4,7 @@
 let runtimes = {
   node: [
     'nodejs14.x',
+    'nodejs16.x',
     'nodejs12.x',
   ],
   python: [
@@ -33,6 +34,13 @@ let runtimes = {
 }
 
 let runtimeVersions = {
+  'nodejs16.x': {
+    runtime:  'node',
+    major:    '16',
+    minor:    null,
+    patch:    null,
+    wildcard: '16.*.*'
+  },
   'nodejs14.x': {
     runtime:  'node',
     major:    '14',

@@ -17,7 +17,7 @@
   "scripts": {
     "lint": "eslint . --fix",
     "test": "npm run lint && npm run test:unit",
-    "test:unit": "cross-env tape 'test/unit/**/*-test.js' | tap-spec",
+    "test:unit": "cross-env tape 'test/unit/**/*-test.js' | tap-arc",
     "rc": "npm version prerelease --preid RC"
   },
   "engines": {
@@ -26,9 +26,9 @@
   "devDependencies": {
     "@architect/eslint-config": "^2.0.1",
     "cross-env": "~7.0.3",
-    "eslint": "^8.2.0",
-    "tap-spec": "~5.0.0",
-    "tape": "~5.3.2"
+    "eslint": "^8.15.0",
+    "tap-arc": "~0.3.4",
+    "tape": "~5.5.3"
   },
   "eslintConfig": {
     "extends": "@architect/eslint-config"
