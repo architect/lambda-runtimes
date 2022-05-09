@@ -3,6 +3,7 @@
 // Runtimes still being tested out can be added, just not at runtimes[runtime][0]
 let runtimes = {
   node: [
+    'nodejs16.x',
     'nodejs14.x',
     'nodejs12.x',
   ],
@@ -33,6 +34,13 @@ let runtimes = {
 }
 
 let runtimeVersions = {
+  'nodejs16.x': {
+    runtime:  'node',
+    major:    '16',
+    minor:    null,
+    patch:    null,
+    wildcard: '16.*.*'
+  },
   'nodejs14.x': {
     runtime:  'node',
     major:    '14',
