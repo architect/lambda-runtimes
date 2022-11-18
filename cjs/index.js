@@ -3,15 +3,15 @@
 // Runtimes still being tested out can be added, just not at runtimes[runtime][0]
 let runtimes = {
   node: [
-    'nodejs14.x',
     'nodejs16.x',
+    'nodejs18.x',
+    'nodejs14.x',
     'nodejs12.x',
   ],
   python: [
     'python3.9',
     'python3.8',
     'python3.7',
-    'python3.6',
   ],
   ruby: [
     'ruby2.7',
@@ -36,6 +36,13 @@ let runtimes = {
 }
 
 let runtimeVersions = {
+  'nodejs18.x': {
+    runtime:  'node',
+    major:    '18',
+    minor:    null,
+    patch:    null,
+    wildcard: '18.*.*'
+  },
   'nodejs16.x': {
     runtime:  'node',
     major:    '16',
@@ -77,13 +84,6 @@ let runtimeVersions = {
     minor:    '7',
     patch:    null,
     wildcard: '3.7.*',
-  },
-  'python3.6': {
-    runtime:  'python',
-    major:    '3',
-    minor:    '6',
-    patch:    null,
-    wildcard: '3.6.*',
   },
   'ruby2.7': {
     runtime:  'ruby',
@@ -204,6 +204,7 @@ let retiredRuntimes = {
     'nodejs', // 0.10
   ],
   python: [
+    'python3.6',
     'python2.7',
   ],
   ruby: [
