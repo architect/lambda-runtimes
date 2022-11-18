@@ -12,6 +12,7 @@
 
 ### Changed
 
+- `nodejs16.x` is now the default Node.js runtime
 - Retired `python3.6`
 
 ---
