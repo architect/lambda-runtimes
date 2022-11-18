@@ -2,11 +2,17 @@
 
 ---
 
-## [1.1.3] 2022-11-08
+## [1.1.3] 2022-11-18
 
 ### Added
 
-- Add `dotnet5.0` and `dotnet6`
+- Added `nodejs18.x`
+- Added `dotnet5.0` and `dotnet6`
+
+
+### Changed
+
+- Retired `python3.6`
 
 ---
 
