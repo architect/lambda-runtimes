@@ -25,6 +25,8 @@ let runtimes = {
     'go1.x',
   ],
   dotnet: [
+    'dotnet6',
+    'dotnet5.0',
     'dotnetcore3.1',
   ],
   custom: [
@@ -118,11 +120,25 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '1.*.*',
   },
-  'dotnetcore3.1': {
+  'dotnet6': {
     runtime:  'dotnet',
-    major:    '3',
-    minor:    '1',
+    major:    '6',
+    minor:    null,
     patch:    null,
+    wildcard: '6.*',
+  },
+  'dotnet5.0': {
+    runtime: 'dotnet',
+    major: '5',
+    minor: '0',
+    patch: null,
+    wildcard: '5.0.*',
+  },
+  'dotnetcore3.1': {
+    runtime: 'dotnet',
+    major: '3',
+    minor: '1',
+    patch: null,
     wildcard: '3.1.*',
   },
 }
