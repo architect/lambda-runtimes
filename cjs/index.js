@@ -6,7 +6,6 @@ let runtimes = {
     'nodejs16.x',
     'nodejs18.x',
     'nodejs14.x',
-    'nodejs12.x',
   ],
   python: [
     'python3.9',
@@ -27,7 +26,6 @@ let runtimes = {
   dotnet: [
     'dotnet6',
     'dotnet5.0',
-    'dotnetcore3.1',
   ],
   custom: [
     'provided.al2',
@@ -56,13 +54,6 @@ let runtimeVersions = {
     minor:    null,
     patch:    null,
     wildcard: '14.*.*'
-  },
-  'nodejs12.x': {
-    runtime:  'node',
-    major:    '12',
-    minor:    null,
-    patch:    null,
-    wildcard: '12.*.*',
   },
   'python3.9': {
     runtime:  'python',
@@ -134,13 +125,6 @@ let runtimeVersions = {
     patch: null,
     wildcard: '5.0.*',
   },
-  'dotnetcore3.1': {
-    runtime: 'dotnet',
-    major: '3',
-    minor: '1',
-    patch: null,
-    wildcard: '3.1.*',
-  },
 }
 
 let runtimeList = Object.values(runtimes).reduce((a, b) => a.concat(b), [])
@@ -196,6 +180,7 @@ let aliases = {
 
 let retiredRuntimes = {
   node: [
+    'nodejs12.x',
     'nodejs10.x',
     'nodejs8.10',
     'nodejs6.10',
@@ -213,6 +198,7 @@ let retiredRuntimes = {
   java: [],
   go: [],
   dotnet: [
+    'dotnetcore3.1',
     'dotnetcore2.1',
     'dotnetcore2.0',
     'dotnetcore1.0',

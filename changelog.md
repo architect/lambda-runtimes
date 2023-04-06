@@ -2,6 +2,14 @@
 
 ---
 
+## [1.1.4] 2023-04-05
+
+### Changed
+
+- Retired `nodejs12.x` (deprecated 2023-03-31), `dotnetcore3.1` (deprecated 2023-04-03)
+
+---
+
 ## [1.1.3] 2022-11-18
 
 ### Added
