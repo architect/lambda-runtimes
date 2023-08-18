@@ -2,6 +2,26 @@
 
 ---
 
+## [Unreleased] 2023-08
+
+### Added
+
+- Added `python3.10` and `python3.11`
+  - default remains `python3.9`
+- Added `java17`
+  - default remains `java11`
+- Added `ruby3.2`
+  - default remains `ruby2.7`
+- Added `dontnet7`
+  - default remains `dotnet6`
+
+### Changed
+
+- Retired `dotnet5.0` (deprecated 2022-05-10)
+- Re-ordered `runtimeVersions` to match AMZN doc order
+
+---
+
 ## [1.1.4] 2023-04-05
 
 ### Changed
