@@ -9,23 +9,27 @@ let runtimes = {
   ],
   python: [
     'python3.9',
+    'python3.11',
+    'python3.10',
     'python3.8',
     'python3.7',
   ],
-  ruby: [
-    'ruby2.7',
-  ],
   java: [
     'java11',
+    'java17',
     'java8.al2',
     'java8',
+  ],
+  dotnet: [
+    'dotnet6',
+    'dotnet7',
   ],
   go: [
     'go1.x',
   ],
-  dotnet: [
-    'dotnet6',
-    'dotnet5.0',
+  ruby: [
+    'ruby2.7',
+    'ruby3.2',
   ],
   custom: [
     'provided.al2',
@@ -55,6 +59,20 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '14.*.*'
   },
+  'python3.11': {
+    runtime:  'python',
+    major:    '3',
+    minor:    '11',
+    patch:    null,
+    wildcard: '3.11.*',
+  },
+  'python3.10': {
+    runtime:  'python',
+    major:    '3',
+    minor:    '10',
+    patch:    null,
+    wildcard: '3.10.*',
+  },
   'python3.9': {
     runtime:  'python',
     major:    '3',
@@ -76,12 +94,12 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '3.7.*',
   },
-  'ruby2.7': {
-    runtime:  'ruby',
-    major:    '2',
-    minor:    '7',
+  'java17': {
+    runtime:  'java',
+    major:    '17',
+    minor:    null,
     patch:    null,
-    wildcard: '2.7.*',
+    wildcard: '17.*.*',
   },
   'java11': {
     runtime:  'java',
@@ -104,12 +122,12 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '8.*.*',
   },
-  'go1.x': {
-    runtime:  'go',
-    major:    '1',
+  'dotnet7': {
+    runtime:  'dotnet',
+    major:    '7',
     minor:    null,
     patch:    null,
-    wildcard: '1.*.*',
+    wildcard: '7.*',
   },
   'dotnet6': {
     runtime:  'dotnet',
@@ -118,12 +136,26 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '6.*',
   },
-  'dotnet5.0': {
-    runtime: 'dotnet',
-    major: '5',
-    minor: '0',
-    patch: null,
-    wildcard: '5.0.*',
+  'go1.x': {
+    runtime:  'go',
+    major:    '1',
+    minor:    null,
+    patch:    null,
+    wildcard: '1.*.*',
+  },
+  'ruby3.2': {
+    runtime:  'ruby',
+    major:    '3',
+    minor:    '2',
+    patch:    null,
+    wildcard: '3.2.*',
+  },
+  'ruby2.7': {
+    runtime:  'ruby',
+    major:    '2',
+    minor:    '7',
+    patch:    null,
+    wildcard: '2.7.*',
   },
 }
 
@@ -131,11 +163,11 @@ let runtimeList = Object.values(runtimes).reduce((a, b) => a.concat(b), [])
 
 let runtimesByArchitecture = {
   arm64: [
-    ...runtimes.node.slice(0, 2),
-    ...runtimes.python.slice(0, 2),
-    ...runtimes.ruby.slice(0, 1),
-    ...runtimes.java.slice(0, 2),
-    ...runtimes.dotnet.slice(0, 1),
+    ...runtimes.node.slice(0, 3),
+    ...runtimes.python.slice(0, 4),
+    ...runtimes.java.slice(0, 3),
+    ...runtimes.dotnet.slice(0, 2),
+    ...runtimes.ruby.slice(0, 2),
     ...runtimes.custom.slice(0, 1),
   ],
   x86_64: [
@@ -198,6 +230,7 @@ let retiredRuntimes = {
   java: [],
   go: [],
   dotnet: [
+    'dotnet5.0',
     'dotnetcore3.1',
     'dotnetcore2.1',
     'dotnetcore2.0',
