@@ -4,6 +4,7 @@
 let runtimes = {
   node: [
     'nodejs16.x',
+    'nodejs20.x',
     'nodejs18.x',
     'nodejs14.x',
   ],
@@ -32,12 +33,20 @@ let runtimes = {
     'ruby3.2',
   ],
   custom: [
+    'provided.al2023',
     'provided.al2',
     'provided',
   ],
 }
 
 let runtimeVersions = {
+  'nodejs20.x': {
+    runtime:  'node',
+    major:    '20',
+    minor:    null,
+    patch:    null,
+    wildcard: '20.*.*'
+  },
   'nodejs18.x': {
     runtime:  'node',
     major:    '18',

@@ -2,6 +2,15 @@
 
 ---
 
+## [1.1.6] 2023-11-15
+
+### Added
+
+- Added `nodejs20.x`
+- Added `provided.al2023`
+
+---
+
 ## [1.1.5] 2023-08-21
 
 ### Added
@@ -18,7 +27,7 @@
 ### Changed
 
 - Retired `dotnet5.0` (deprecated 2022-05-10)
-- Re-ordered `runtimeVersions` to match AMZN doc order
+- Re-ordered `runtimeVersions` to match Amazon's doc order
 
 ---
 
