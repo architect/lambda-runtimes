@@ -2,6 +2,16 @@
 
 ---
 
+## [1.1.7] 2023-12-13
+
+### Added
+
+- Retired `nodejs14.x` (deprecated 2023-11-27)
+- Retired `python3.7` (deprecated 2023-11-27)
+- Retired `'ruby2.7',` (deprecated 2023-12-07)
+
+---
+
 ## [1.1.6] 2023-11-15
 
 ### Added
