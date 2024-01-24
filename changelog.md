@@ -2,13 +2,29 @@
 
 ---
 
+## [2.0.0] 2024-01-23
+
+### Added
+
+- Added `python3.12`
+
+
+### Changed
+
+- Breaking change: updated default runtimes for Node.js, Python
+  - Node.js: `nodejs20.x`
+  - Python: `python3.12`
+
+---
+
 ## [1.1.7] 2023-12-13
 
 ### Added
 
 - Retired `nodejs14.x` (deprecated 2023-11-27)
 - Retired `python3.7` (deprecated 2023-11-27)
-- Retired `'ruby2.7',` (deprecated 2023-12-07)
+- Retired `ruby2.7` (deprecated 2023-12-07)
+  - Default is now `ruby3.2`
 
 ---
 
@@ -26,13 +42,13 @@
 ### Added
 
 - Added `python3.10` and `python3.11`
-  - default remains `python3.9`
+  - Default remains `python3.9`
 - Added `java17`
-  - default remains `java11`
+  - Default remains `java11`
 - Added `ruby3.2`
-  - default remains `ruby2.7`
+  - Default remains `ruby2.7`
 - Added `dontnet7`
-  - default remains `dotnet6`
+  - Default remains `dotnet6`
 
 ### Changed
 
