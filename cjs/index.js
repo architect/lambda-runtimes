@@ -15,17 +15,14 @@ let runtimes = {
     'python3.8',
   ],
   java: [
-    'java11',
+    'java21',
     'java17',
+    'java11',
     'java8.al2',
-    'java8',
   ],
   dotnet: [
-    'dotnet6',
     'dotnet7',
-  ],
-  go: [
-    'go1.x',
+    'dotnet6',
   ],
   ruby: [
     'ruby3.2',
@@ -33,7 +30,6 @@ let runtimes = {
   custom: [
     'provided.al2023',
     'provided.al2',
-    'provided',
   ],
 }
 
@@ -94,6 +90,13 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '3.8.*',
   },
+  'java21': {
+    runtime:  'java',
+    major:    '21',
+    minor:    null,
+    patch:    null,
+    wildcard: '21.*.*',
+  },
   'java17': {
     runtime:  'java',
     major:    '17',
@@ -115,13 +118,6 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '8.*.*',
   },
-  'java8': {
-    runtime:  'java',
-    major:    '8',
-    minor:    null,
-    patch:    null,
-    wildcard: '8.*.*',
-  },
   'dotnet7': {
     runtime:  'dotnet',
     major:    '7',
@@ -136,13 +132,6 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '6.*',
   },
-  'go1.x': {
-    runtime:  'go',
-    major:    '1',
-    minor:    null,
-    patch:    null,
-    wildcard: '1.*.*',
-  },
   'ruby3.2': {
     runtime:  'ruby',
     major:    '3',
@@ -156,19 +145,18 @@ let runtimeList = Object.values(runtimes).reduce((a, b) => a.concat(b), [])
 
 let runtimesByArchitecture = {
   arm64: [
-    ...runtimes.node.slice(0, 3),
-    ...runtimes.python.slice(0, 4),
-    ...runtimes.java.slice(0, 3),
-    ...runtimes.dotnet.slice(0, 2),
-    ...runtimes.ruby.slice(0, 2),
-    ...runtimes.custom.slice(0, 1),
+    ...runtimes.node,
+    ...runtimes.python,
+    ...runtimes.java,
+    ...runtimes.dotnet,
+    ...runtimes.ruby,
+    ...runtimes.custom,
   ],
   x86_64: [
     ...runtimes.node,
     ...runtimes.python,
     ...runtimes.ruby,
     ...runtimes.java,
-    ...runtimes.go,
     ...runtimes.dotnet,
     ...runtimes.custom,
   ],
@@ -196,8 +184,6 @@ let aliases = {
   ruby:       'ruby',
   rb:         'ruby',
   java:       'java',
-  go:         'go',
-  golang:     'go',
   dotnet:     'dotnet',
   '.net':     'dotnet',
   custom:     'custom',
@@ -223,8 +209,12 @@ let retiredRuntimes = {
     'ruby2.7',
     'ruby2.5',
   ],
-  java: [],
-  go: [],
+  java: [
+    'java8',
+  ],
+  go: [
+    'go1.x',
+  ],
   dotnet: [
     'dotnet5.0',
     'dotnetcore3.1',
@@ -233,6 +223,9 @@ let retiredRuntimes = {
     'dotnetcore1.0',
   ],
   custom: [],
+  provided: [
+    'provided',
+  ],
 }
 
 module.exports = {

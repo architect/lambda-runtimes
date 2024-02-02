@@ -2,24 +2,30 @@
 
 ---
 
-## [2.0.0] 2024-01-23
+## [2.0.0 - 2.0.1] 2024-01-23
 
 ### Added
 
-- Added `python3.12`
+- Added `python3.12`, `java21`
 
 
 ### Changed
 
-- Breaking change: updated default runtimes for Node.js, Python
+- All current runtimes now support `arm64`
+- Breaking change: updated default runtimes for Node.js, Python, .NET
   - Node.js: `nodejs20.x`
   - Python: `python3.12`
+  - .NET: `dotnet7`
+- Retired `go1.x` (deprecated 2024-01-08)
+  - AWS will no longer have a Go-specific runtime, so `go` and `golang` aliases have also been removed
+- Retired `java8` (deprecated 2024-01-08)
+- Retired `provided` (deprecated 2024-01-08)
 
 ---
 
 ## [1.1.7] 2023-12-13
 
-### Added
+### Changed
 
 - Retired `nodejs14.x` (deprecated 2023-11-27)
 - Retired `python3.7` (deprecated 2023-11-27)
