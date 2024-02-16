@@ -24,10 +24,10 @@
     "node": ">=14"
   },
   "devDependencies": {
-    "@architect/eslint-config": "^2.1.1",
-    "eslint": "^8.47.0",
-    "tap-arc": "^1.0.0",
-    "tape": "~5.6.6"
+    "@architect/eslint-config": "^2.1.2",
+    "eslint": "^8.56.0",
+    "tap-arc": "^1.2.2",
+    "tape": "~5.7.5"
   },
   "files": [
     "cjs/*",
