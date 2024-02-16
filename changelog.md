@@ -2,6 +2,14 @@
 
 ---
 
+## [2.0.2] 2024-02-15
+
+### Changed
+
+- Fixed publishing extraneous files to npm releases
+
+---
+
 ## [2.0.0 - 2.0.1] 2024-01-23
 
 ### Added

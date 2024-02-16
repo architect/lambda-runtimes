@@ -29,6 +29,10 @@
     "tap-arc": "^1.0.0",
     "tape": "~5.6.6"
   },
+  "files": [
+    "cjs/*",
+    "esm/*.js"
+  ],
   "eslintConfig": {
     "extends": "@architect/eslint-config"
   }
