@@ -2,6 +2,14 @@
 
 ---
 
+## [2.0.3] 2024-12-03
+
+### Added
+
+- Added `nodejs22.x`, `python3.13`, and `dotnet8`; thanks @lpsinger!
+
+---
+
 ## [2.0.2] 2024-02-15
 
 ### Changed
