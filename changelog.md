@@ -2,6 +2,14 @@
 
 ---
 
+## [2.0.4] 2025-01-17
+
+### Changed
+
+- Previously published version updated default runtimes without doing so as a breaking change; reverted to previous preferred order
+
+---
+
 ## [2.0.3] 2024-12-03
 
 ### Added

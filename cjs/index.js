@@ -3,13 +3,13 @@
 // Runtimes still being tested out can be added, just not at runtimes[runtime][0]
 let runtimes = {
   node: [
-    'nodejs22.x',
     'nodejs20.x',
+    'nodejs22.x',
     'nodejs18.x',
   ],
   python: [
-    'python3.13',
     'python3.12',
+    'python3.13',
     'python3.11',
     'python3.10',
     'python3.9',
@@ -21,8 +21,8 @@ let runtimes = {
     'java8.al2',
   ],
   dotnet: [
-    'dotnet8',
     'dotnet6',
+    'dotnet8',
   ],
   ruby: [
     'ruby3.3',
