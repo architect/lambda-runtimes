@@ -21,7 +21,6 @@ let runtimes = {
     'java8.al2',
   ],
   dotnet: [
-    'dotnet6',
     'dotnet8',
   ],
   ruby: [
@@ -126,13 +125,6 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '8.*',
   },
-  'dotnet6': {
-    runtime:  'dotnet',
-    major:    '6',
-    minor:    null,
-    patch:    null,
-    wildcard: '6.*',
-  },
   'ruby3.3': {
     runtime:  'ruby',
     major:    '3',
@@ -227,6 +219,7 @@ let retiredRuntimes = {
   ],
   dotnet: [
     'dotnet7',
+    'dotnet6',
     'dotnet5.0',
     'dotnetcore3.1',
     'dotnetcore2.1',

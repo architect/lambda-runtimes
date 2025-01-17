@@ -2,11 +2,12 @@
 
 ---
 
-## [2.0.4] 2025-01-17
+## [2.0.4 - 2.0.5] 2025-01-17
 
 ### Changed
 
 - Previously published version updated default runtimes without doing so as a breaking change; reverted to previous preferred order
+- Retired `dotnet6` (deprecated 2024-12-20)
 
 ---
 
