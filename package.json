@@ -15,25 +15,14 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "lint": "eslint . --fix",
-    "test": "npm run lint && npm run test:unit",
-    "test:unit": "tape 'test/unit/**/*-test.js' | tap-arc",
+    "test": "node --test 'test/unit/**/*-test.js'",
     "rc": "npm version prerelease --preid RC"
   },
   "engines": {
-    "node": ">=14"
-  },
-  "devDependencies": {
-    "@architect/eslint-config": "^2.1.2",
-    "eslint": "^8.56.0",
-    "tap-arc": "^1.2.2",
-    "tape": "~5.7.5"
+    "node": ">=22"
   },
   "files": [
     "cjs/*",
     "esm/*.js"
-  ],
-  "eslintConfig": {
-    "extends": "@architect/eslint-config"
-  }
+  ]
 }

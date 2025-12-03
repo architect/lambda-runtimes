@@ -2,6 +2,12 @@
 
 ---
 
+## [3.0.0] 2025-12-03
+
+- Added `nodejs24.x`, `python3.14`; thanks again @lpsinger!
+- Removed eslint (overkill, and frankly annoying)
+- Removed tape,etc for the native node test runner
+
 ## [2.0.4 - 2.0.5] 2025-01-17
 
 ### Changed

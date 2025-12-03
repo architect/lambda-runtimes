@@ -40,21 +40,21 @@ let runtimeVersions = {
     major:    '24',
     minor:    null,
     patch:    null,
-    wildcard: '24.*.*'
+    wildcard: '24.*.*',
   },
   'nodejs22.x': {
     runtime:  'node',
     major:    '22',
     minor:    null,
     patch:    null,
-    wildcard: '22.*.*'
+    wildcard: '22.*.*',
   },
   'nodejs20.x': {
     runtime:  'node',
     major:    '20',
     minor:    null,
     patch:    null,
-    wildcard: '20.*.*'
+    wildcard: '20.*.*',
   },
   'python3.14': {
     runtime:  'python',
