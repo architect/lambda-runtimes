@@ -5,11 +5,12 @@ let runtimes = {
   node: [
     'nodejs20.x',
     'nodejs22.x',
-    'nodejs18.x',
+    'nodejs24.x',
   ],
   python: [
     'python3.12',
     'python3.13',
+    'python3.14',
     'python3.11',
     'python3.10',
     'python3.9',
@@ -34,6 +35,13 @@ let runtimes = {
 }
 
 let runtimeVersions = {
+  'nodejs24.x': {
+    runtime:  'node',
+    major:    '24',
+    minor:    null,
+    patch:    null,
+    wildcard: '24.*.*'
+  },
   'nodejs22.x': {
     runtime:  'node',
     major:    '22',
@@ -48,12 +56,12 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '20.*.*'
   },
-  'nodejs18.x': {
-    runtime:  'node',
-    major:    '18',
-    minor:    null,
+  'python3.14': {
+    runtime:  'python',
+    major:    '3',
+    minor:    '14',
     patch:    null,
-    wildcard: '18.*.*'
+    wildcard: '3.14.*',
   },
   'python3.13': {
     runtime:  'python',
@@ -191,6 +199,7 @@ let aliases = {
 
 let retiredRuntimes = {
   node: [
+    'nodejs18.x',
     'nodejs16.x',
     'nodejs14.x',
     'nodejs12.x',
