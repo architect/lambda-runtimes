@@ -13,18 +13,20 @@ let runtimes = {
     'python3.14',
     'python3.11',
     'python3.10',
-    'python3.9',
   ],
   java: [
+    'java25',
     'java21',
     'java17',
     'java11',
     'java8.al2',
   ],
   dotnet: [
+    'dotnet9',
     'dotnet8',
   ],
   ruby: [
+    'ruby3.4',
     'ruby3.3',
     'ruby3.2',
   ],
@@ -91,12 +93,12 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '3.10.*',
   },
-  'python3.9': {
-    runtime:  'python',
-    major:    '3',
-    minor:    '9',
+  'java25': {
+    runtime:  'java',
+    major:    '25',
+    minor:    null,
     patch:    null,
-    wildcard: '3.9.*',
+    wildcard: '25.*.*',
   },
   'java21': {
     runtime:  'java',
@@ -126,12 +128,26 @@ let runtimeVersions = {
     patch:    null,
     wildcard: '8.*.*',
   },
+  'dotnet9': {
+    runtime:  'dotnet',
+    major:    '9',
+    minor:    null,
+    patch:    null,
+    wildcard: '9.*',
+  },
   'dotnet8': {
     runtime:  'dotnet',
     major:    '8',
     minor:    null,
     patch:    null,
     wildcard: '8.*',
+  },
+  'ruby3.4': {
+    runtime:  'ruby',
+    major:    '3',
+    minor:    '4',
+    patch:    null,
+    wildcard: '3.4.*',
   },
   'ruby3.3': {
     runtime:  'ruby',
@@ -211,6 +227,7 @@ let retiredRuntimes = {
     'nodejs', // 0.10
   ],
   python: [
+    'python3.9',
     'python3.8',
     'python3.7',
     'python3.6',
