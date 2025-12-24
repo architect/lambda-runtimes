@@ -2,6 +2,18 @@
 
 ---
 
+## [3.0.1] 2025-12-23
+
+### Added
+- Added `java25` (Amazon Linux 2023, deprecation: Jun 30, 2029)
+- Added `dotnet9` (Amazon Linux 2023, deprecation: Nov 10, 2026)
+- Added `ruby3.4` (Amazon Linux 2023, deprecation: Mar 31, 2028)
+
+### Changed
+- Retired `python3.9` (deprecated Dec 15, 2025)
+
+---
+
 ## [3.0.0] 2025-12-03
 
 - Added `nodejs24.x`, `python3.14`; thanks again @lpsinger!
