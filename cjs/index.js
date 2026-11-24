@@ -6,6 +6,7 @@ let runtimes = {
     'nodejs20.x',
     'nodejs22.x',
     'nodejs24.x',
+    'nodejs26.x',
   ],
   python: [
     'python3.12',
@@ -37,6 +38,13 @@ let runtimes = {
 }
 
 let runtimeVersions = {
+  'nodejs26.x': {
+    runtime:  'node',
+    major:    '26',
+    minor:    null,
+    patch:    null,
+    wildcard: '26.*.*',
+  },
   'nodejs24.x': {
     runtime:  'node',
     major:    '24',
