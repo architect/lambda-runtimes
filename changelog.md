@@ -2,7 +2,7 @@
 
 ---
 
-## [Unreleased] 2026-11-24
+## [3.0.2] 2026-11-24
 
 ### Added
 - Added `nodejs26.x` (Amazon Linux 2023, deprecation: Jul 1, 2029)
